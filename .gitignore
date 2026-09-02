@@ -5,3 +5,4 @@ obj/
 .vscode/
 *.suo
 appsettings.Development.json
+appsettings.json
