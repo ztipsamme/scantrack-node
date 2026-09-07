@@ -49,10 +49,7 @@ public class DijkstraService
             {
                 var isDestination = string.Equals(neighbor, to, StringComparison.OrdinalIgnoreCase);
 
-                // Hoppa över besökta städer
                 if (skip.Contains(neighbor) && !isDestination) continue;
-
-                // Hoppa över städer som inte är online (mellansteg måste vara registrerade)
                 if (!isDestination && online != null && !online.Contains(neighbor)) continue;
 
                 var newDist = dist[current] + weight;
